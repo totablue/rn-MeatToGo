@@ -6,6 +6,7 @@ import styled from "styled-components/native";
 
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
+import Spacer from "../../../components/spacer/Spacer";
 
 const InfoContainer = styled(View)`
     padding: ${(props) => props.theme.space[3]};
@@ -81,11 +82,11 @@ const RestaurantInfoCard = ({ restaurant = {} }) => {
                                 CLOSED TEMPORARILY
                             </Text>
                         ) : null}
-                        <View style={{ paddingLeft: 16 }} />
+                        <Spacer variant={"left.large"} />
                         {isOpenNow ? (
                             <SvgXml xml={open} width={20} height={20} />
                         ) : null}
-                        <View style={{ paddingLeft: 16 }} />
+                        <Spacer variant={"left.large"} />
                         <Image
                             style={{ width: 15, height: 15 }}
                             source={{ uri: icon }}
