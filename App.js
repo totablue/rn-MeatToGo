@@ -7,13 +7,15 @@ import {
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons, Feather } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 import { theme } from "./src/infrastructure/theme";
 
 import RestaurantsScreen from "./src/features/restaurants/screens/RestaurantsScreen";
 import { Text } from "react-native";
 import { SafeArea } from "./src/components/utilities/SafeArea";
+
+import { restaurantsRequest } from "./src/services/restaurants/restaurants.service";
 
 const Tab = createBottomTabNavigator();
 
